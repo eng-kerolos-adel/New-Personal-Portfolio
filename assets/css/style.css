@@ -329,6 +329,26 @@ main {
 .avatar-box {
   background: var(--bg-gradient-onyx);
   border-radius: 20px;
+  transition: 0.6s;
+  transform-style: preserve-3d;
+}
+
+.avatar-box:hover {
+  transform: rotateY(180deg);
+}
+
+.card {
+  backface-visibility: hidden;
+}
+
+.front {
+  border-radius: 20px;
+}
+
+.back {
+  transform: rotateY(180deg);
+  position: absolute;
+  top: 0;
 }
 
 .info-content .name {
